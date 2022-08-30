@@ -1,26 +1,20 @@
+import 'package:connectivity/utils/dependency_injection.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'utils/dependency_injection.dart';
-
 
 void main() {
   runApp(const MyApp());
-  DependencyInjection.init(); //Here we are calling the Dependency Injection
+  DependencyInjection.init();
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-  
-  // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Counter App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const Home(),
+      home: Home(),
     );
   }
 }
